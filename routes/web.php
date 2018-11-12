@@ -16,6 +16,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/about', function() {
+    return view('pages.about');
+});
+
 Route::get('/hello', function () {
     return "Hello World";
 });
@@ -25,11 +29,12 @@ Route::get('/users/{id}/{name}', function($id, $name) {
 });
 */
 
-Route::get('/', 'PagesController@index');
 
-Route::get('/about', function() {
-    return view('pages.about');
-});
+Route::get('/', 'PagesController@index');
+Route::get('/about', 'PagesController@about');
+Route::get('/services', 'PagesController@services');
+
+
 
 
 
