@@ -11,6 +11,25 @@
 |
 */
 
+/*
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/hello', function () {
+    return "Hello World";
+});
+
+Route::get('/users/{id}/{name}', function($id, $name) {
+    return "Dit is gebruiker " . $id . " met de naam <h1>" . $name . "</h1>.";
+});
+*/
+
+Route::get('/', 'PagesController@index');
+
+Route::get('/about', function() {
+    return view('pages.about');
+});
+
+
+
