@@ -1,0 +1,11 @@
+/*
+Hier in de public directory kan je custom CSS toevoegen zonder gebruik te maken van SASS.
+Wanneer je npm run dev toepast overschrijft SASS de custom CSS in de app.css file in je public directory.
+De CSS code in style.css blijft altijd overschrijven omdat de stylesheet na de app.css file is toegevoegd
+in de head van je layout blade file, in dit geval 'app.blade.php' in de layouts map onder views.
+*/
+
+body {
+
+    background: purple;
+}
