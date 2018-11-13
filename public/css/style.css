@@ -4,8 +4,3 @@ Wanneer je npm run dev toepast overschrijft SASS de custom CSS in de app.css fil
 De CSS code in style.css blijft altijd overschrijven omdat de stylesheet na de app.css file is toegevoegd
 in de head van je layout blade file, in dit geval 'app.blade.php' in de layouts map onder views.
 */
-
-body {
-
-    background: purple;
-}
