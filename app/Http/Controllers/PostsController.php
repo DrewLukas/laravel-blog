@@ -21,7 +21,8 @@ class PostsController extends Controller
         // $posts = Post::orderBy('title', 'asc')->take(1)->get(); // selecteer 1 post      
         // $posts = Post::orderBy('title', 'asc')->get(); // gesorteerd asc op titel
         $posts = Post::orderBy('created_at', 'desc')->paginate(10);
-        return view('posts.index')->with('posts', $posts);
+        //return view('posts.index')->with('posts', $posts);
+        return view('posts.index', compact('posts'));
     }
 
     /**
@@ -113,6 +114,8 @@ class PostsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $post = Post::find($id);
+        $post->delete();
+        return redirect('/posts')->with('success', 'Post Removed');
     }
 }
